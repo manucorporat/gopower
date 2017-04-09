@@ -9,6 +9,9 @@ import (
 	units "github.com/docker/go-units"
 )
 
+var CurrentProc = "/sys/class/power_supply/BAT0/current_now"
+var VoltageProc = "/sys/class/power_supply/BAT0/voltage_now"
+
 var ampUnits = []string{"uA", "mA", "A"}
 var voltUnits = []string{"uV", "mV", "V"}
 var wattUnits = []string{"uW", "mW", "W"}
@@ -59,7 +62,7 @@ func readNumber(filepath string) (float64, error) {
 // GetCurrentNow returns the instant current of your system.
 // Otherwise it returns an error.
 func GetCurrentNow() (Ampere, error) {
-	value, err := readNumber("/sys/class/power_supply/BAT0/current_now")
+	value, err := readNumber(CurrentProc)
 	if err != nil {
 		return 0, err
 	}
@@ -69,7 +72,7 @@ func GetCurrentNow() (Ampere, error) {
 // GetVoltageNow returns the instant voltage of your system.
 // Otherwise it returns an error.
 func GetVoltageNow() (Volt, error) {
-	value, err := readNumber("/sys/class/power_supply/BAT0/voltage_now")
+	value, err := readNumber(VoltageProc)
 	if err != nil {
 		return 0, err
 	}
