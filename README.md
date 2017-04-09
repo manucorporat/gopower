@@ -17,7 +17,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/manucorporat/gopower"
+	"github.com/manucorporat/go-power"
 )
 
 func main() {
@@ -37,7 +37,7 @@ import (
 
 	"time"
 
-	"github.com/manucorporat/gopower"
+	"github.com/manucorporat/go-power"
 )
 
 func main() {
