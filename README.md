@@ -1,5 +1,4 @@
-#go-power
-
+# go-power
 go-power allows developers to watch for power consumption of you system.
 
 ## Install
