@@ -1,7 +1,9 @@
 #go-power
+
 go-power allows developers to watch for power consumption of you system.
 
 ## Install
+
 ```
 go get github.com/manucorporat/go-power
 ```
